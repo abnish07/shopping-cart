@@ -1,4 +1,4 @@
- [shopping cart App](https://i.imgur.com/tLutDX2.png).
+ ![shopping cart App](https://i.imgur.com/tLutDX2.png).
 
 ## Table of Content
 
@@ -23,7 +23,7 @@ I have developed the online shopping cart website through which you can add thei
  7. On checkout page, you can fill the delivery address
  8. After checkout, you can order your products
 
- [shopping cart App](https://i.imgur.com/09aeDPv.png).
+ ![shopping cart App](https://i.imgur.com/09aeDPv.png).
 
 
 ## Technology used
