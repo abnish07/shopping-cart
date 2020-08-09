@@ -1,0 +1,47 @@
+[
+    {
+        "id":501,
+        "brandName": "Adidas",
+        "description":"Mens Shoe",
+        "price": 4999,
+        "url":"../shoes/shoes1.jpeg",
+        "category": "shoes"
+
+    },
+    {
+        "id":502,
+        "brandName": "Nike",
+        "description": "Nike light Material",
+        "price": 3999,
+        "url":"../shoes/s2.jpeg",
+        "category": "shoes"
+
+    },
+    {
+        "id":503,
+        "brandName": "Nike",
+        "description": "Nike Black gray for men",
+        "price": 2999,
+        "url":"../shoes/shoes3.jpeg",
+        "category": "shoes"
+
+    },
+    {
+        "id":504,
+        "brandName": "Adidas",
+        "description": "Mens Shoe",
+        "price": 6999,
+        "url":"../shoes/s1.jpeg",
+        "category": "shoes"
+
+    },
+    {
+        "id":505,
+        "brandName": "Nike",
+        "description": "light Material Mens Shoe",
+        "price": 1999,
+        "url":"../shoes/s4.jpeg",
+        "category": "shoes"
+
+    }
+]

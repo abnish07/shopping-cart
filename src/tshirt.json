@@ -1,0 +1,48 @@
+[
+   
+    {
+        "id":201,
+        "brandName": "local",
+        "description": "Mens T-shirt",
+        "price": 999,
+        "url":"../mens_tshirt/t1.jpeg",
+        "category": "menstshirt"
+
+    },
+    {
+        "id":202,
+        "brandName": "U.S Polo",
+        "description": "Color Black Hoody",
+        "price": 699,
+        "url":"../mens_tshirt/t2.jpeg",
+        "category": "menstshirt"
+
+    },
+    {
+        "id":203,
+        "brandName": "Kobio",
+        "description": "Rounded Neck",
+        "price": 599,
+        "url":"../mens_tshirt/t3.jpeg",
+        "category": "menstshirt"
+
+    },
+    {
+        "id":204,
+        "brandName": "Wrath",
+        "description": "Color Block Men",
+        "price": 599,
+        "url":"../mens_tshirt/t4.jpeg",
+        "category": "menstshirt"
+
+    },
+    {
+        "id":205,
+        "brandName": "Tripr",
+        "description": "Solid V neck",
+        "price": 499,
+        "url":"../mens_tshirt/t6.jpeg",
+        "category": "menstshirt"
+
+    }
+]

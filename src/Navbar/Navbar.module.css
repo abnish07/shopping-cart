@@ -1,0 +1,12 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+}
+
+.menu{
+    padding: 10px;
+    margin-right: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}

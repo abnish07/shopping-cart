@@ -1,0 +1,47 @@
+[
+    {
+        "id":101,
+        "brandName": "apple",
+        "description": "iPhoneSE",
+        "price": 38999,
+        "url":"../mobile/apple1.jpeg",
+        "category": "mobile"
+
+    },
+    {
+        "id":102,
+        "brandName": "apple",
+        "description": "iPhone8 plus",
+        "price": 68999,
+        "url":"../mobile/apple2.jpeg",
+        "category": "mobile"
+
+    },
+    {
+        "id":103,
+        "brandName": "apple",
+        "description": "iPhone11",
+        "price": 87999,
+        "url":"../mobile/apple3.jpeg",
+        "category": "mobile"
+
+    },
+    {
+        "id":104,
+        "brandName": "RealMe",
+        "description": "Fastest Phone",
+        "price": 29999,
+        "url":"../mobile/m1.jpeg",
+        "category": "mobile"
+
+    },
+    {
+        "id":105,
+        "brandName": "Samsung",
+        "description": "Samsung Galaxy S1",
+        "price": 39999,
+        "url":"../mobile/m2.jpeg",
+        "category": "mobile"
+
+    }
+]
