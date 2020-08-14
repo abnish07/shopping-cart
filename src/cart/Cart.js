@@ -13,7 +13,7 @@ class Cart extends React.Component {
     render() { 
         const { cartItem, removeItems, addToCart, decreaseItems, isLogin } = this.props;
         console.log(cartItem)
-        // if(!isLogin===false){
+        // if(!isLogin){
         //     return <Redirect to="./login"/>
         // }
         return ( 

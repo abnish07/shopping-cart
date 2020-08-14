@@ -1,75 +1,83 @@
-// import React from 'react';
+import React from 'react';
 
 
 
-// loadRazorpay=(src)=>{
-//     return new Promise((resolve)=>{
+ function loadScript(src){
+    return new Promise((resolve)=>{
 
-//     const script = document.createElement('script')
-//     script =src;
-//     document.appendChild(script)
-//     script.onload = ()=>{
-//         resolve(true)
-//     }
-//     script.onload = ()=>{
-//         resolve(false)
-//     }
-// })
+    const script = document.createElement('script')
+    script.src =src;
+    script.onload = ()=>{
+        resolve(true)
+    }
+    script.onerror = ()=>{
+        resolve(false)
+    }
+    document.body.appendChild(script)
+})
+}
+const __DEV__ = document.domain==="localhost"
+
+// if(document.domain === "localhost"){
+//     //development mode
+// }
+// else {
+//     //production mode
 // }
 
+function pay(){
 
-// class Payment extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {  }
-//     }
+    async function displayRazorpay(){
 
-//     async function displayRazorpay(){
+        const res = await loadScript("https://checkout.razorpay.com/v1/checkout.js")
+        if(!res){
+            alert("script file is not load, check your internet connection")
+            return
+        }
 
-//         const res = await loadRazorpay("https://checkout.razorpay.com/v1/checkout.js")
-//         if(!res){
-//             alert("script file is not load, check your internet connection")
-//             return
-//         }
+        const data = await fetch("http://localhost:8000/razorpay", { method: "POST" }).then((t)=>t.json())
 
-//         var options = {
-//             "key": "YOUR_KEY_ID", // Enter the Key ID generated from the Dashboard
-//             "amount": "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-//             "currency": "INR",
-//             "name": "Acme Corp",
-//             "description": "Test Transaction",
-//             "image": "https://example.com/your_logo",
-//             "order_id": "order_9A33XWu170gUtm", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-//             "handler": function (response){
-//                 alert(response.razorpay_payment_id);
-//                 alert(response.razorpay_order_id);
-//                 alert(response.razorpay_signature)
-//             },
-//             "prefill": {
-//                 "name": "Gaurav Kumar",
-//                 "email": "gaurav.kumar@example.com",
-//                 "contact": "9999999999"
-//             },
-//             "notes": {
-//                 "address": "Razorpay Corporate Office"
-//             },
-//             "theme": {
-//                 "color": "#F37254"
-//             }
-//         };
-//         var rzp1 = new Razorpay(options);
-//     }
+        console.log("data", data)
 
+        const options = {
+            key: __DEV__?"rzp_test_9jiN2CbOHEot3o":"Production key", // Enter the Key ID generated from the Dashboard
+            amount: data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+            currency: data.currency,
+            name: "Donation",
+            description: "Thank you for donation ",
+            image: "https://example.com/your_logo",
+            order_id: data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1 fetch from backend 
+            handler: function (response){
+                alert("Thank you for your payment");
+               
+            },
+            prefill: {
+                name: "Abnish Kumar",
+                email: "abnish.kumar@example.com",
+                contact: "9999999999"
+            },
+            // notes: {
+            //     address: "Razorpay Corporate Office"
+            // },
+            theme: {
+                color: "#F37254"
+            }
+        };
+        const paymentObj = new window.Razorpay(options);
+        // debugger
+        paymentObj.open()
+    }
 
 
-//     render() { 
-//         return (
-//             <div>
-//                    <div className="text-center mt-5 mb-5 ">
-//             <button className="btn btn-danger" onClick={loadRazorpay}>PAY</button></div>  
-//             </div>
-//          );
-//     }
-// }
- 
-// export default Payment;
+
+        return (
+            <div>
+                   <div className="text-center mt-5 mb-5 ">
+            <button className="btn btn-danger"
+             onClick={displayRazorpay}
+             >PAY NOW</button></div>  
+            </div>
+         );
+    
+        }
+export default pay;

@@ -10,7 +10,7 @@
 
 ## About the Project
 
-I have developed the online shopping cart website through which you can add their products into cart and order them. 
+I have developed the online shopping cart website through which you can add their products into cart and order them. I have also added dummy payment method. 
 
 ## How to use 
 
@@ -22,6 +22,7 @@ I have developed the online shopping cart website through which you can add thei
  6. After that you can order the products and checkout 
  7. On checkout page, you can fill the delivery address
  8. After checkout, you can order your products
+ 9. If you want to pay online, click on pay now button. 
 
  ![shopping cart App](https://i.imgur.com/09aeDPv.png).
 
@@ -32,6 +33,7 @@ I have developed the online shopping cart website through which you can add thei
 2. Redux
 3. Thunk 
 4. BootStrap
+5. Express (for payment gateway)
 
 
 ## Dependencies
@@ -40,3 +42,4 @@ I have developed the online shopping cart website through which you can add thei
 * React-Redux
 * Redux-Thunk
 * UUID (Generate random String ID)
+* Razorpay

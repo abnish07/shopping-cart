@@ -55,7 +55,9 @@ class Checkout extends React.Component {
                 <div className="text-center pb-3">
                 <button className="btn btn-primary"
                  onClick={()=>orderConfirmed(this.state)}
-                 >Order Confirmed</button></div>
+                 >Order Confirmed</button>
+               
+                 </div>
             </div>
 
             </div>

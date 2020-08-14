@@ -32,7 +32,9 @@ class Order extends React.Component {
             </div> 
             </div>}
             <div className="text-center mt-5">
-                    {cartItems.length<=0?"": <button className="btn btn-primary" onClick={()=>checkout(cartItems)}>Checkout</button>}</div>
+                    {cartItems.length<=0?"": <button className="btn btn-primary" onClick={()=>checkout(cartItems)}>Checkout</button>}
+                   
+                    </div>
             </div>
          );
     }

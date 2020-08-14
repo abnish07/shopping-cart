@@ -25,7 +25,7 @@ class Login extends React.Component {
         const {userLogin, loginRes, handleLogin, isLogin} = this.props;
         // console.log(store.getState().isLogin)
         // console.log(handleLogin())
-        if(isLogin == true){
+        if(isLogin){
            return <Redirect to ="/cart"/>
         }
 
