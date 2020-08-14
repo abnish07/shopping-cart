@@ -16,7 +16,7 @@ import React from 'react';
     document.body.appendChild(script)
 })
 }
-const __DEV__ = document.domain==="localhost"
+// const __DEV__ = document.domain==="localhost"
 
 // if(document.domain === "localhost"){
 //     //development mode
@@ -40,7 +40,7 @@ function pay(){
         console.log("data", data)
 
         const options = {
-            key: __DEV__?"rzp_test_9jiN2CbOHEot3o":"Production key", // Enter the Key ID generated from the Dashboard
+            key:"rzp_test_9jiN2CbOHEot3o", // Enter the Key ID generated from the Dashboard
             amount: data.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
             currency: data.currency,
             name: "Donation",
